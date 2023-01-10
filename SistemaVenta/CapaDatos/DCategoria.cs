@@ -37,7 +37,7 @@ namespace CapaDatos
 
         public string Insertar(DCategoria Categoria)
         {
-            // Definicion de variables e instancias
+            // Definicion de variables e instancias del metodo Insertar
             string rpta = "";
             SqlConnection sqlCon = new SqlConnection();
 
