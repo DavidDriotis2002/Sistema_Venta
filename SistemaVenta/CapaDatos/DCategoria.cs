@@ -37,27 +37,161 @@ namespace CapaDatos
 
         public string Insertar(DCategoria Categoria)
         {
+            // Definicion de variables e instancias
+            string rpta = "";
+            SqlConnection sqlCon = new SqlConnection();
 
+            try
+            {
+                // Creamos el comando insert a la base de datos
+                SqlCommand cmd = new SqlCommand("insert into Categoria(nombre, descripcion) values(@nombre,@descripcion)",sqlCon);
+                
+                // Definiendo parametros para el comando insert
+                cmd.Parameters.Add(new SqlParameter("nombre", Categoria.Nombre));
+                cmd.Parameters.Add(new SqlParameter("descripcion", Categoria.Descripcion));
+
+                // Abriendo conexion a la base de datos
+                sqlCon.Open();
+
+                // Ejecutamos nuestro comando insert a la base de datos
+                rpta = cmd.ExecuteNonQuery() == 1 ? "OK" : "NO SE INGRESO EL REGISTRO";
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                // Cerramos conexion a la base de datos
+                if (sqlCon.State == ConnectionState.Open) 
+                    sqlCon.Close();
+            }
+            return rpta;
         }
 
         public string Editar (DCategoria Categoria)
         {
+            string rpta = "";
+            SqlConnection sqlCon = new SqlConnection();
 
+            try
+            {
+                //Creamos el comando update a la base de datos
+                SqlCommand cmd = new SqlCommand("update Categoria set nombre=@nombre, descripcion=@descripcion where idCategoria = @idCategoria", sqlCon);
+                
+                cmd.Parameters.Add(new SqlParameter("nombre",Categoria.Nombre));
+                cmd.Parameters.Add(new SqlParameter("descripcion",Categoria.Descripcion));
+                cmd.Parameters.Add(new SqlParameter("idCategoria",Categoria.Idcategoria));
+
+                // Abriendo la conexion a la base de datos
+                sqlCon.Open();
+
+
+                //Ejecutamos nuestro comando update a la base de datos
+
+                rpta = cmd.ExecuteNonQuery() == 1 ? "OK" : "NO SE ACTUALIZO EL REGISTRO";
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open) 
+                    sqlCon.Close();
+            }
+            return rpta;
         }
 
         public string Eliminar(DCategoria Categoria)
         {
+            string rpta = "";
+            SqlConnection sqlCon = new SqlConnection();
 
+            try
+            {
+                //Creamos el comando delete a la base de datos
+                SqlCommand cmd = new SqlCommand("delete from Categoria where idCategoria=@idCategoria", sqlCon);
+
+                cmd.Parameters.Add(new SqlParameter("idCategoria", Categoria.Idcategoria));
+
+                //Abriendo la conexion a la base de datos
+                sqlCon.Open();
+
+                //Ejecutamos nuestro comando delete a nuestra base de datos
+
+                rpta = cmd.ExecuteNonQuery() == 1 ? "OK" : "NO SE ELIMINO EL REGISTRO";
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open) sqlCon.Close();
+            }
+            return rpta;
         }
              
         public DataTable Mostrar()
         {
+            DataTable DtResultado = new DataTable("Categoria");
+            SqlConnection sqlCon = new SqlConnection();
+            try
+            {
+                //Creamos el comando select a la base de datos
+                SqlCommand cmd = new SqlCommand("select * from Categoria", sqlCon);
 
+                //Abrimos conexion a base de datos
+                sqlCon.Open();
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(cmd);
+                SqlDat.Fill(DtResultado);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Ocurrio un error: " + ex.Message);
+                DtResultado = null;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open) 
+                    sqlCon.Close();
+            }
+
+            return DtResultado;
         }
 
         public DataTable BuscarNombre(DCategoria Categoria)
         {
+            DataTable DtResultado = new DataTable("Categoria");
+            SqlConnection sqlCon = new SqlConnection();
+            try
+            {
+                //Creamos el comando select a la base de datos
+                SqlCommand cmd = new SqlCommand("select * from Categoria where idCategoria=@idCategoria", sqlCon);
 
+                cmd.Parameters.Add(new SqlParameter("idCategoria", Categoria.Idcategoria));
+
+                //Abrimos conexion a base de datos
+                sqlCon.Open();
+                SqlDataAdapter SqlDat = new SqlDataAdapter(cmd);
+                SqlDat.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ocurrio un error: " + ex.Message);
+                DtResultado = null;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open)
+                    sqlCon.Close();
+            }
+            return DtResultado;
         }
     }
 
