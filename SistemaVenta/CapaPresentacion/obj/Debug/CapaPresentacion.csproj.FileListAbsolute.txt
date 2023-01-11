@@ -1,0 +1,13 @@
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaPresentacion.dll
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCategoria.resources
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.dll
+C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.pdb

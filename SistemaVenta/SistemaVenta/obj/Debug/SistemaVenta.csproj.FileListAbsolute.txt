@@ -1,0 +1,16 @@
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\SistemaVenta.exe.config
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\SistemaVenta.exe
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\SistemaVenta.pdb
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaPresentacion.dll
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaNegocio.dll
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaDatos.dll
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaPresentacion.pdb
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaNegocio.pdb
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaDatos.pdb
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.csproj.AssemblyReference.cache
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.Properties.Resources.resources
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.csproj.GenerateResource.cache
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.csproj.CoreCompileInputs.cache
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.csproj.CopyComplete
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.exe
+C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.pdb

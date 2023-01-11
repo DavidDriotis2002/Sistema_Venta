@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    class Conexion
+     class Conexion
     {
         public static string Cn = "Data Source=LAPTOP-NI0D2KGL\\SQLEXPRESS; Initial Catalog=dbventas; Integrated Security=true";
     }

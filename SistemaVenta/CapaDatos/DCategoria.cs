@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace CapaDatos
 {
-    class DCategoria
+    public class DCategoria
     {
         private int _Idcategoria;
         private string _Nombre;
@@ -143,6 +143,7 @@ namespace CapaDatos
             try
             {
                 //Creamos el comando select a la base de datos
+                sqlCon.ConnectionString = Conexion.Cn;
                 SqlCommand cmd = new SqlCommand("select * from Categoria", sqlCon);
 
                 //Abrimos conexion a base de datos
@@ -171,10 +172,13 @@ namespace CapaDatos
             SqlConnection sqlCon = new SqlConnection();
             try
             {
+                sqlCon.ConnectionString = Conexion.Cn;
+                
                 //Creamos el comando select a la base de datos
-                SqlCommand cmd = new SqlCommand("select * from Categoria where idCategoria=@idCategoria", sqlCon);
+              
+                SqlCommand cmd = new SqlCommand("select * from Categoria where nombre LIKE '%' + @nombre + '%'", sqlCon);
 
-                cmd.Parameters.Add(new SqlParameter("idCategoria", Categoria.Idcategoria));
+                cmd.Parameters.Add(new SqlParameter("nombre", Categoria.TextoBuscar));
 
                 //Abrimos conexion a base de datos
                 sqlCon.Open();

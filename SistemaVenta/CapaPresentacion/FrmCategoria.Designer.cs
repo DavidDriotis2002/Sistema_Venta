@@ -42,7 +42,6 @@ namespace CapaPresentacion
             this.chkEliminar = new System.Windows.Forms.CheckBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.dataListado = new System.Windows.Forms.DataGridView();
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@ namespace CapaPresentacion
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.btnReporte = new System.Windows.Forms.Button();
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -131,6 +131,7 @@ namespace CapaPresentacion
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(177, 22);
             this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnBuscar
             // 
@@ -140,6 +141,7 @@ namespace CapaPresentacion
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "&Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEliminar
             // 
@@ -174,9 +176,9 @@ namespace CapaPresentacion
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(375, 80);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(167, 17);
+            this.lblTotal.Size = new System.Drawing.Size(147, 17);
             this.lblTotal.TabIndex = 6;
-            this.lblTotal.Text = "Cantidad de registros: 20";
+            this.lblTotal.Text = "Cantidad de registros:";
             // 
             // dataListado
             // 
@@ -195,14 +197,6 @@ namespace CapaPresentacion
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListado.Size = new System.Drawing.Size(624, 234);
             this.dataListado.TabIndex = 7;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.MinimumWidth = 6;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Width = 125;
             // 
             // groupBox1
             // 
@@ -327,6 +321,14 @@ namespace CapaPresentacion
             this.btnReporte.Text = "&Reporte";
             this.btnReporte.UseVisualStyleBackColor = true;
             // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.MinimumWidth = 6;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 125;
+            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -358,7 +360,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataListado;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.CheckBox chkEliminar;
         private System.Windows.Forms.Button btnImprimir;
@@ -381,5 +382,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ErrorProvider errorIcono;
         private System.Windows.Forms.ToolTip ttMensaje;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
     }
 }
