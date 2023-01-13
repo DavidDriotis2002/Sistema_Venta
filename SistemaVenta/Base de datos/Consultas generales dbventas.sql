@@ -15,3 +15,9 @@ where idCategoria = 3
 
 select * from Categoria
 where idCategoria = 5
+
+select * from Categoria
+where nombre = 'ferreteria'
+
+select * from Categoria
+where nombre LIKE '%a%'
