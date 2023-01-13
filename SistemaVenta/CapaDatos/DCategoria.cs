@@ -43,6 +43,7 @@ namespace CapaDatos
 
             try
             {
+                sqlCon.ConnectionString = Conexion.Cn;
                 // Creamos el comando insert a la base de datos
                 SqlCommand cmd = new SqlCommand("insert into Categoria(nombre, descripcion) values(@nombre,@descripcion)",sqlCon);
                 
@@ -77,6 +78,7 @@ namespace CapaDatos
 
             try
             {
+                sqlCon.ConnectionString = Conexion.Cn;
                 //Creamos el comando update a la base de datos
                 SqlCommand cmd = new SqlCommand("update Categoria set nombre=@nombre, descripcion=@descripcion where idCategoria = @idCategoria", sqlCon);
                 
