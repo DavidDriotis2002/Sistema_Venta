@@ -127,5 +127,44 @@ namespace CapaPresentacion
         {
             this.BuscarNombre();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            this.IsNuevo = true;
+            this.IsEditar = false;
+            this.Botones();
+            this.Limpiar();
+            this.Habilitar(true);
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string rpta = "";
+                if(this.txtNombre.Text == string.Empty)
+                {
+                    MensajeError("Falta ingresar algunos datos, serán remarcados");
+                    errorIcono.SetError(txtNombre,"Ingrese un nombre");
+
+                }
+                else
+                {
+                    if (this.IsNuevo)
+                    {
+                        rpta = NCategoria.Insertar(this.txtNombre.Text.Trim().ToUpper(), this.txtDescripcion.Text.Trim());
+                    }
+                    else
+                    {
+                        rpta = NCategoria.Editar(Convert.ToInt32(this.txtIdcategoria.Text), this.txtNombre.Text.Trim().ToUpper(), this.txtDescripcion.Text.Trim());
+
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
     }
 }
