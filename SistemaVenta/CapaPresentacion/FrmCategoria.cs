@@ -219,6 +219,67 @@ namespace CapaPresentacion
             this.Limpiar();
             this.Habilitar(false);
         }
+
+        private void chkEliminar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkEliminar.Checked)
+            {
+                this.dataListado.Columns[0].Visible = true;
+            }
+            else
+            {
+                this.dataListado.Columns[0].Visible = false;
+            }
+        }
+
+        private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
+            {
+                DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
+                ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Realmente desea eliminar los registros", "Sistema de ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.OK)
+                {
+                    string Codigo;
+                    string Rpta = "";
+
+                    foreach (DataGridViewRow row in dataListado.Rows)
+                    {
+                        if (Convert.ToBoolean(row.Cells[0].Value))
+                        {
+                            Codigo = Convert.ToString(row.Cells[1].Value);
+                            Rpta = NCategoria.Eliminar(Convert.ToInt32(Codigo));
+
+                            if (Rpta.Equals("OK"))
+                            {
+                                this.MensajeOk("Se eliminó correctamente el registro");
+                            }
+                            else
+                            {
+                                this.MensajeError(Rpta);
+                            }
+
+                        }
+                    } 
+                    //Mostramos nuestro dataListado ya actualizado
+                    this.Mostrar();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
     }
 }
  

@@ -114,6 +114,7 @@ namespace CapaDatos
 
             try
             {
+                sqlCon.ConnectionString = Conexion.Cn;
                 //Creamos el comando delete a la base de datos
                 SqlCommand cmd = new SqlCommand("delete from Categoria where idCategoria=@idCategoria", sqlCon);
 

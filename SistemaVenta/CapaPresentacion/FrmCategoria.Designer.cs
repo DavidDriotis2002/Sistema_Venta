@@ -32,35 +32,35 @@ namespace CapaPresentacion
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.chkEliminar = new System.Windows.Forms.CheckBox();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.dataListado = new System.Windows.Forms.DataGridView();
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.chkEliminar = new System.Windows.Forms.CheckBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtIdcategoria = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtIdcategoria = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
-            this.btnReporte = new System.Windows.Forms.Button();
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
@@ -87,17 +87,6 @@ namespace CapaPresentacion
             this.tabControl1.Size = new System.Drawing.Size(661, 390);
             this.tabControl1.TabIndex = 1;
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(653, 361);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Mantenimiento";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataListado);
@@ -116,70 +105,6 @@ namespace CapaPresentacion
             this.tabPage2.Text = "Listado";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nombre:";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(101, 26);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(177, 22);
-            this.txtBuscar.TabIndex = 1;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(300, 24);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(107, 23);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "&Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(423, 24);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(99, 23);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "&Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Location = new System.Drawing.Point(542, 24);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(102, 23);
-            this.btnImprimir.TabIndex = 4;
-            this.btnImprimir.Text = "&Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // chkEliminar
-            // 
-            this.chkEliminar.AutoSize = true;
-            this.chkEliminar.Location = new System.Drawing.Point(20, 76);
-            this.chkEliminar.Name = "chkEliminar";
-            this.chkEliminar.Size = new System.Drawing.Size(80, 21);
-            this.chkEliminar.TabIndex = 5;
-            this.chkEliminar.Text = "Eliminar";
-            this.chkEliminar.UseVisualStyleBackColor = true;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(375, 80);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(147, 17);
-            this.lblTotal.TabIndex = 6;
-            this.lblTotal.Text = "Cantidad de registros:";
-            // 
             // dataListado
             // 
             this.dataListado.AllowUserToAddRows = false;
@@ -197,7 +122,93 @@ namespace CapaPresentacion
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListado.Size = new System.Drawing.Size(624, 234);
             this.dataListado.TabIndex = 7;
+            this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.MinimumWidth = 6;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 125;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(375, 80);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(147, 17);
+            this.lblTotal.TabIndex = 6;
+            this.lblTotal.Text = "Cantidad de registros:";
+            // 
+            // chkEliminar
+            // 
+            this.chkEliminar.AutoSize = true;
+            this.chkEliminar.Location = new System.Drawing.Point(20, 76);
+            this.chkEliminar.Name = "chkEliminar";
+            this.chkEliminar.Size = new System.Drawing.Size(80, 21);
+            this.chkEliminar.TabIndex = 5;
+            this.chkEliminar.Text = "Eliminar";
+            this.chkEliminar.UseVisualStyleBackColor = true;
+            this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(542, 24);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(102, 23);
+            this.btnImprimir.TabIndex = 4;
+            this.btnImprimir.Text = "&Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(423, 24);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(99, 23);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "&Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(300, 24);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(107, 23);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "&Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(101, 26);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(177, 22);
+            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nombre:";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(653, 361);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Mantenimiento";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -219,85 +230,14 @@ namespace CapaPresentacion
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Categorías";
             // 
-            // label3
+            // btnReporte
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Código:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 106);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Nombre:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 146);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 17);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Descripción:";
-            // 
-            // txtIdcategoria
-            // 
-            this.txtIdcategoria.Location = new System.Drawing.Point(105, 65);
-            this.txtIdcategoria.Name = "txtIdcategoria";
-            this.txtIdcategoria.Size = new System.Drawing.Size(138, 22);
-            this.txtIdcategoria.TabIndex = 3;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(105, 106);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(306, 22);
-            this.txtNombre.TabIndex = 4;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(105, 146);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescripcion.Size = new System.Drawing.Size(306, 103);
-            this.txtDescripcion.TabIndex = 5;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(16, 280);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(100, 23);
-            this.btnNuevo.TabIndex = 6;
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(122, 280);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 23);
-            this.btnGuardar.TabIndex = 7;
-            this.btnGuardar.Text = "&Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(228, 280);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(100, 23);
-            this.btnEditar.TabIndex = 8;
-            this.btnEditar.Text = "&Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnReporte.Location = new System.Drawing.Point(440, 280);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(100, 23);
+            this.btnReporte.TabIndex = 10;
+            this.btnReporte.Text = "&Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
@@ -309,6 +249,86 @@ namespace CapaPresentacion
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(228, 280);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(100, 23);
+            this.btnEditar.TabIndex = 8;
+            this.btnEditar.Text = "&Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(122, 280);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(100, 23);
+            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(16, 280);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(100, 23);
+            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(105, 146);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDescripcion.Size = new System.Drawing.Size(306, 103);
+            this.txtDescripcion.TabIndex = 5;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(105, 106);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(306, 22);
+            this.txtNombre.TabIndex = 4;
+            // 
+            // txtIdcategoria
+            // 
+            this.txtIdcategoria.Location = new System.Drawing.Point(105, 65);
+            this.txtIdcategoria.Name = "txtIdcategoria";
+            this.txtIdcategoria.Size = new System.Drawing.Size(138, 22);
+            this.txtIdcategoria.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 146);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 17);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Descripción:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Nombre:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Código:";
+            // 
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
@@ -316,23 +336,6 @@ namespace CapaPresentacion
             // ttMensaje
             // 
             this.ttMensaje.IsBalloon = true;
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.Location = new System.Drawing.Point(440, 280);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(100, 23);
-            this.btnReporte.TabIndex = 10;
-            this.btnReporte.Text = "&Reporte";
-            this.btnReporte.UseVisualStyleBackColor = true;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.MinimumWidth = 6;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Width = 125;
             // 
             // FrmCategoria
             // 
@@ -347,10 +350,10 @@ namespace CapaPresentacion
             this.Text = "Mantenimiento de categoías";
             this.Load += new System.EventHandler(this.FrmCategoria_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).EndInit();
+            this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
