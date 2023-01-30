@@ -11,3 +11,16 @@ C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentac
 C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.dll
 C:\Git David\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaPresentacion.dll
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCategoria.resources
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.dll
+C:\Repository\Net\Sistema_Venta\SistemaVenta\CapaPresentacion\obj\Debug\CapaPresentacion.pdb

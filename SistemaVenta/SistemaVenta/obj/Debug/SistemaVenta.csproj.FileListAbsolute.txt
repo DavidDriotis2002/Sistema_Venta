@@ -14,3 +14,19 @@ C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.cspr
 C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.csproj.CopyComplete
 C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.exe
 C:\Git David\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.pdb
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\SistemaVenta.exe.config
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\SistemaVenta.exe
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\SistemaVenta.pdb
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaPresentacion.dll
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaNegocio.dll
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaDatos.dll
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaPresentacion.pdb
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaNegocio.pdb
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\bin\Debug\CapaDatos.pdb
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.csproj.AssemblyReference.cache
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.Properties.Resources.resources
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.csproj.GenerateResource.cache
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.csproj.CoreCompileInputs.cache
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.csproj.CopyComplete
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.exe
+C:\Repository\Net\Sistema_Venta\SistemaVenta\SistemaVenta\obj\Debug\SistemaVenta.pdb
