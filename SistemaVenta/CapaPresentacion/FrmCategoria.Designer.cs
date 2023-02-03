@@ -33,10 +33,12 @@ namespace CapaPresentacion
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RdbActivarBoton = new System.Windows.Forms.RadioButton();
+            this.RdbLike = new System.Windows.Forms.RadioButton();
             this.dataListado = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.chkEliminar = new System.Windows.Forms.CheckBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -59,6 +61,7 @@ namespace CapaPresentacion
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -89,9 +92,9 @@ namespace CapaPresentacion
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.dataListado);
             this.tabPage2.Controls.Add(this.lblTotal);
-            this.tabPage2.Controls.Add(this.chkEliminar);
             this.tabPage2.Controls.Add(this.btnImprimir);
             this.tabPage2.Controls.Add(this.btnEliminar);
             this.tabPage2.Controls.Add(this.btnBuscar);
@@ -104,6 +107,41 @@ namespace CapaPresentacion
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Listado";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.RdbActivarBoton);
+            this.groupBox2.Controls.Add(this.RdbLike);
+            this.groupBox2.Location = new System.Drawing.Point(20, 64);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(349, 42);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tipo de busqueda";
+            // 
+            // RdbActivarBoton
+            // 
+            this.RdbActivarBoton.AutoSize = true;
+            this.RdbActivarBoton.Location = new System.Drawing.Point(172, 15);
+            this.RdbActivarBoton.Name = "RdbActivarBoton";
+            this.RdbActivarBoton.Size = new System.Drawing.Size(140, 21);
+            this.RdbActivarBoton.TabIndex = 1;
+            this.RdbActivarBoton.TabStop = true;
+            this.RdbActivarBoton.Text = "Buscar con botón";
+            this.RdbActivarBoton.UseVisualStyleBackColor = true;
+            // 
+            // RdbLike
+            // 
+            this.RdbLike.AutoSize = true;
+            this.RdbLike.Checked = true;
+            this.RdbLike.Location = new System.Drawing.Point(16, 15);
+            this.RdbLike.Name = "RdbLike";
+            this.RdbLike.Size = new System.Drawing.Size(55, 21);
+            this.RdbLike.TabIndex = 0;
+            this.RdbLike.TabStop = true;
+            this.RdbLike.Text = "Like";
+            this.RdbLike.UseVisualStyleBackColor = true;
+            this.RdbLike.CheckedChanged += new System.EventHandler(this.RdbLike_CheckedChanged);
             // 
             // dataListado
             // 
@@ -136,22 +174,11 @@ namespace CapaPresentacion
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(375, 80);
+            this.lblTotal.Location = new System.Drawing.Point(375, 89);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(147, 17);
             this.lblTotal.TabIndex = 6;
             this.lblTotal.Text = "Cantidad de registros:";
-            // 
-            // chkEliminar
-            // 
-            this.chkEliminar.AutoSize = true;
-            this.chkEliminar.Location = new System.Drawing.Point(20, 76);
-            this.chkEliminar.Name = "chkEliminar";
-            this.chkEliminar.Size = new System.Drawing.Size(80, 21);
-            this.chkEliminar.TabIndex = 5;
-            this.chkEliminar.Text = "Eliminar";
-            this.chkEliminar.UseVisualStyleBackColor = true;
-            this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
             // 
             // btnImprimir
             // 
@@ -352,6 +379,8 @@ namespace CapaPresentacion
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -369,7 +398,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataListado;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.CheckBox chkEliminar;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnBuscar;
@@ -391,5 +419,8 @@ namespace CapaPresentacion
         private System.Windows.Forms.ErrorProvider errorIcono;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton RdbActivarBoton;
+        private System.Windows.Forms.RadioButton RdbLike;
     }
 }

@@ -77,13 +77,12 @@ namespace CapaPresentacion
             }
 
         }
-
         //Metodo para ocultar columnas
 
         private void OcultarColumnas()
         {
-            this.dataListado.Columns[0].Visible = false;
-            this.dataListado.Columns[0].Visible = false;
+            this.dataListado.Columns[0].Visible = true;
+            this.dataListado.Columns[1].Visible = false;
         }
 
         //Metodo mostrar
@@ -99,19 +98,37 @@ namespace CapaPresentacion
 
         private void BuscarNombre()
         {
-            this.dataListado.DataSource = NCategoria.BuscarNombre(this.txtBuscar.Text);
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de registros: " + Convert.ToString(dataListado.Rows.Count);
+            if (RdbLike.Checked)
+            {
+                this.dataListado.DataSource = NCategoria.BuscarNombre(this.txtBuscar.Text);
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de registros: " + Convert.ToString(dataListado.Rows.Count);
+            }
+            else
+            {
+                RdbActivarBoton.Enabled = true;
+            }
+
         }
 
         private void FrmCategoria_Load(object sender, EventArgs e)
         {
+            btnBuscar.Enabled = false;
             this.Top = 0;
             this.Left = 0;
 
             this.Mostrar();
             this.Habilitar(false);
             this.Botones();
+
+           /* if (ChkLike.Checked)
+            {
+                ChkBoton.CheckState = false;
+            }
+            else
+            {
+                ChkBoton.Enabled = true;
+            }*/
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -121,6 +138,9 @@ namespace CapaPresentacion
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             this.BuscarNombre();
+            this.dataListado.DataSource = NCategoria.BuscarNombre(this.txtBuscar.Text);
+            this.OcultarColumnas();
+            lblTotal.Text = "Total de registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -220,18 +240,6 @@ namespace CapaPresentacion
             this.Habilitar(false);
         }
 
-        private void chkEliminar_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkEliminar.Checked)
-            {
-                this.dataListado.Columns[0].Visible = true;
-            }
-            else
-            {
-                this.dataListado.Columns[0].Visible = false;
-            }
-        }
-
         private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
@@ -278,6 +286,18 @@ namespace CapaPresentacion
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void RdbLike_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RdbLike.Checked)
+            {
+                btnBuscar.Enabled = false;
+            }
+            else
+            {
+                btnBuscar.Enabled = true;
             }
         }
     }
