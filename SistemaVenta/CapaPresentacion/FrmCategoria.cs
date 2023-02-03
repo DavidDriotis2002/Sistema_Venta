@@ -120,15 +120,6 @@ namespace CapaPresentacion
             this.Mostrar();
             this.Habilitar(false);
             this.Botones();
-
-           /* if (ChkLike.Checked)
-            {
-                ChkBoton.CheckState = false;
-            }
-            else
-            {
-                ChkBoton.Enabled = true;
-            }*/
         }
         private void label1_Click(object sender, EventArgs e)
         {
