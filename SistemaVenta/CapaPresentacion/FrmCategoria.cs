@@ -110,6 +110,15 @@ namespace CapaPresentacion
             }
 
         }
+        //Metodo para buscar nombre por palabra completa
+        private void BuscarNombreExacto()
+        {
+            if (RdbActivarBoton.Checked)
+            {
+                this.dataListado.DataSource = NCategoria.BuscarNombreExtacto(this.txtBuscar.Text);
+                lblTotal.Text = "Total de registros: " + Convert.ToString(dataListado.Rows.Count);
+            }
+        }
 
         private void FrmCategoria_Load(object sender, EventArgs e)
         {
@@ -128,15 +137,39 @@ namespace CapaPresentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.BuscarNombre();
-            this.dataListado.DataSource = NCategoria.BuscarNombre(this.txtBuscar.Text);
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de registros: " + Convert.ToString(dataListado.Rows.Count);
+            string BNombre = txtBuscar.Text;
+            if (RdbActivarBoton.Checked)
+            {
+
+                this.BuscarNombreExacto();
+                this.dataListado.DataSource = NCategoria.BuscarNombreExtacto(this.txtBuscar.Text);
+                lblTotal.Text = "Total de registros: " + Convert.ToString(dataListado.Rows.Count);
+            }
+            else
+            {
+                this.BuscarNombre();
+                this.dataListado.DataSource = NCategoria.BuscarNombre(this.txtBuscar.Text);
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de registros: " + Convert.ToString(dataListado.Rows.Count);
+            }
+
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        private void º(object sender, EventArgs e)
         {
-            this.BuscarNombre();
+
+            if (RdbLike.Checked)
+            {
+                    this.BuscarNombre();
+            }
+            else
+            {
+                txtBuscar.Text.Equals("nombre");
+                this.BuscarNombreExacto();
+            }
+
+
+            
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -244,20 +277,18 @@ namespace CapaPresentacion
         {
             try
             {
-                DialogResult Opcion;
-                Opcion = MessageBox.Show("Realmente desea eliminar los registros", "Sistema de ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (Opcion == DialogResult.OK)
-                {
                     string Codigo;
                     string Rpta = "";
-
                     foreach (DataGridViewRow row in dataListado.Rows)
                     {
                         if (Convert.ToBoolean(row.Cells[0].Value))
                         {
                             Codigo = Convert.ToString(row.Cells[1].Value);
                             Rpta = NCategoria.Eliminar(Convert.ToInt32(Codigo));
-
+                        DialogResult Opcion;
+                        Opcion = MessageBox.Show("Realmente desea eliminar los registros", "Sistema de ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (Opcion == DialogResult.OK)
+                        {
                             if (Rpta.Equals("OK"))
                             {
                                 this.MensajeOk("Se eliminó correctamente el registro");
@@ -266,13 +297,24 @@ namespace CapaPresentacion
                             {
                                 this.MensajeError(Rpta);
                             }
+                        }
 
                         }
-                    } 
-                    //Mostramos nuestro dataListado ya actualizado
-                    this.Mostrar();
+                    }
+
+                if (Rpta.Equals("OK"))
+                {
 
                 }
+                else
+                {
+                    MensajeError("No existe ningún elemento seleccionado, por favor seleccionar como mínimo 1");
+                }
+
+                   
+
+                    //Mostramos nuestro dataListado ya actualizado
+                    this.Mostrar();                
             }
             catch (Exception ex)
             {
@@ -290,6 +332,11 @@ namespace CapaPresentacion
             {
                 btnBuscar.Enabled = true;
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            BuscarNombre();
         }
     }
 }

@@ -58,5 +58,15 @@ namespace CapaNegocio
 
             return obj.BuscarNombre(obj);
         }
+
+        //metodo BuscarNombre que llame al metodo BuscarNombre que se encuentra en la clase DCategoria de la CapaDatos
+
+        public static DataTable BuscarNombreExtacto(string textobuscarnombre)
+        {
+            DCategoria obj = new DCategoria();
+            obj.TextoBuscar = textobuscarnombre;
+
+            return obj.BuscarNombreExacto(obj);
+        }
     }
 }

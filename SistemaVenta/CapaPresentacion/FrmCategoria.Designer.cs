@@ -112,7 +112,7 @@ namespace CapaPresentacion
             // 
             this.groupBox2.Controls.Add(this.RdbActivarBoton);
             this.groupBox2.Controls.Add(this.RdbLike);
-            this.groupBox2.Location = new System.Drawing.Point(20, 64);
+            this.groupBox2.Location = new System.Drawing.Point(20, 75);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(349, 42);
             this.groupBox2.TabIndex = 10;
@@ -151,14 +151,14 @@ namespace CapaPresentacion
             this.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Eliminar});
-            this.dataListado.Location = new System.Drawing.Point(20, 121);
+            this.dataListado.Location = new System.Drawing.Point(20, 158);
             this.dataListado.MultiSelect = false;
             this.dataListado.Name = "dataListado";
             this.dataListado.ReadOnly = true;
             this.dataListado.RowHeadersWidth = 51;
             this.dataListado.RowTemplate.Height = 24;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(624, 234);
+            this.dataListado.Size = new System.Drawing.Size(624, 197);
             this.dataListado.TabIndex = 7;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);

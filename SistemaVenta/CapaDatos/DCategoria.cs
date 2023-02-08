@@ -200,6 +200,38 @@ namespace CapaDatos
             }
             return DtResultado;
         }
+
+        public DataTable BuscarNombreExacto(DCategoria Categoria)
+        {
+            DataTable DtResultado = new DataTable("Categoria");
+            SqlConnection sqlCon = new SqlConnection();
+            try
+            {
+                sqlCon.ConnectionString = Conexion.Cn;
+
+                //Creamos el comando select a la base de datos
+
+                SqlCommand cmd = new SqlCommand("select * from Categoria where nombre = @nombre", sqlCon);
+
+                cmd.Parameters.Add(new SqlParameter("nombre", Categoria.TextoBuscar));
+
+                //Abrimos conexion a base de datos
+                sqlCon.Open();
+                SqlDataAdapter SqlDat = new SqlDataAdapter(cmd);
+                SqlDat.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ocurrio un error: " + ex.Message);
+                DtResultado = null;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open)
+                    sqlCon.Close();
+            }
+            return DtResultado;
+        }
     }
 
    

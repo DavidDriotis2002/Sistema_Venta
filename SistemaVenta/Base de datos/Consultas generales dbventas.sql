@@ -17,7 +17,7 @@ select * from Categoria
 where idCategoria = 5
 
 select * from Categoria
-where nombre = 'ferreteria'
+where nombre = 'ropa'
 
 select * from Categoria
 where nombre LIKE '%a%'
