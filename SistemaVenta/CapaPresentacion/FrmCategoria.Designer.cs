@@ -59,6 +59,7 @@ namespace CapaPresentacion
             this.label3 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
+            this.rdbFiltroDgv = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -110,11 +111,12 @@ namespace CapaPresentacion
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.rdbFiltroDgv);
             this.groupBox2.Controls.Add(this.RdbActivarBoton);
             this.groupBox2.Controls.Add(this.RdbLike);
             this.groupBox2.Location = new System.Drawing.Point(20, 75);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(349, 42);
+            this.groupBox2.Size = new System.Drawing.Size(447, 42);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tipo de busqueda";
@@ -122,7 +124,7 @@ namespace CapaPresentacion
             // RdbActivarBoton
             // 
             this.RdbActivarBoton.AutoSize = true;
-            this.RdbActivarBoton.Location = new System.Drawing.Point(172, 15);
+            this.RdbActivarBoton.Location = new System.Drawing.Point(131, 15);
             this.RdbActivarBoton.Name = "RdbActivarBoton";
             this.RdbActivarBoton.Size = new System.Drawing.Size(140, 21);
             this.RdbActivarBoton.TabIndex = 1;
@@ -174,7 +176,7 @@ namespace CapaPresentacion
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(375, 89);
+            this.lblTotal.Location = new System.Drawing.Point(473, 90);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(147, 17);
             this.lblTotal.TabIndex = 6;
@@ -364,6 +366,17 @@ namespace CapaPresentacion
             // 
             this.ttMensaje.IsBalloon = true;
             // 
+            // rdbFiltroDgv
+            // 
+            this.rdbFiltroDgv.AutoSize = true;
+            this.rdbFiltroDgv.Location = new System.Drawing.Point(319, 15);
+            this.rdbFiltroDgv.Name = "rdbFiltroDgv";
+            this.rdbFiltroDgv.Size = new System.Drawing.Size(87, 21);
+            this.rdbFiltroDgv.TabIndex = 2;
+            this.rdbFiltroDgv.TabStop = true;
+            this.rdbFiltroDgv.Text = "Filtro dgv";
+            this.rdbFiltroDgv.UseVisualStyleBackColor = true;
+            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -422,5 +435,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton RdbActivarBoton;
         private System.Windows.Forms.RadioButton RdbLike;
+        private System.Windows.Forms.RadioButton rdbFiltroDgv;
     }
 }

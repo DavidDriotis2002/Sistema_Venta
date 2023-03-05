@@ -277,44 +277,59 @@ namespace CapaPresentacion
         {
             try
             {
-                    string Codigo;
-                    string Rpta = "";
-                    foreach (DataGridViewRow row in dataListado.Rows)
+                string Codigo;
+                List<string> codigosEliminar = new List<string>();
+                string Rpta = "";
+
+                foreach (DataGridViewRow row in dataListado.Rows)
+                {
+                    if (Convert.ToBoolean(row.Cells[0].Value))
                     {
-                        if (Convert.ToBoolean(row.Cells[0].Value))
+                        Codigo = Convert.ToString(row.Cells[1].Value);
+                        codigosEliminar.Add(Codigo);
+                    }
+                }
+
+                if (codigosEliminar.Count <= 0)
+                {
+                    MensajeError("No existe ningún elemento seleccionado, por favor seleccionar como mínimo 1");
+                    return;
+                }
+                else {
+                    DialogResult Opcion;
+                    Opcion = MessageBox.Show("Realmente desea eliminar los registros", "Sistema de ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                    if (Opcion == DialogResult.OK)
+                    {
+
+                        for (int x = 0; x < codigosEliminar.Count; x++)
                         {
-                            Codigo = Convert.ToString(row.Cells[1].Value);
-                            Rpta = NCategoria.Eliminar(Convert.ToInt32(Codigo));
-                        DialogResult Opcion;
-                        Opcion = MessageBox.Show("Realmente desea eliminar los registros", "Sistema de ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                        if (Opcion == DialogResult.OK)
-                        {
-                            if (Rpta.Equals("OK"))
+                            Rpta = NCategoria.Eliminar(Convert.ToInt32(codigosEliminar[x]));
+
+                            if (Rpta == "OK")
                             {
-                                this.MensajeOk("Se eliminó correctamente el registro");
+                                Console.WriteLine("Correcto, se eliminó el código: " + codigosEliminar[x]);
                             }
                             else
                             {
                                 this.MensajeError(Rpta);
+                                break;
                             }
                         }
 
+                        if (codigosEliminar.Count == 1)
+                        {
+                            this.MensajeOk("Se eliminó correctamente el registro");
                         }
+                        else {
+                            this.MensajeOk("Se eliminaron correctamente los registros");
+                        }
+                        
                     }
 
-                if (Rpta.Equals("OK"))
-                {
-
-                }
-                else
-                {
-                    MensajeError("No existe ningún elemento seleccionado, por favor seleccionar como mínimo 1");
-                }
-
-                   
-
                     //Mostramos nuestro dataListado ya actualizado
-                    this.Mostrar();                
+                    this.Mostrar();
+                }
             }
             catch (Exception ex)
             {
@@ -336,8 +351,19 @@ namespace CapaPresentacion
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            BuscarNombre();
+            
+
+            //Buscar solo en el datagridview
+            if (rdbFiltroDgv.Checked)
+            {
+                string Keyword = txtBuscar.Text;
+                (dataListado.DataSource as DataTable).DefaultView.RowFilter = string.Format("nombre LIKE '%"+Keyword+"%'");
+            }
+            else
+            {
+                BuscarNombre();
+            }
         }
     }
 }
- 
+  
